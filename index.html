@@ -1,91 +1,244 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>特价促销</title>
-    <style type="text/css">
-    span {
-        text-decoration: line-through;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        body {
+            margin: 0;
+            color: #2f2a25;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            line-height: 1.8;
+            background: #f6efe7;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .page {
+            width: min(1080px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 32px 0 48px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 28px;
+            align-items: center;
+            min-height: 76vh;
+            padding: 28px;
+            border: 1px solid #ead8c3;
+            border-radius: 8px;
+            background: #fffaf4;
+            box-shadow: 0 18px 40px rgba(101, 74, 47, 0.12);
+        }
+
+        .hero img {
+            width: 100%;
+            height: min(62vh, 560px);
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            margin-bottom: 14px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            background: #c9492c;
+            border-radius: 999px;
+        }
+
+        h1 {
+            margin: 0 0 14px;
+            font-size: clamp(34px, 6vw, 68px);
+            line-height: 1.05;
+        }
+
+        .subtitle {
+            margin: 0 0 22px;
+            color: #6c5c4d;
+            font-size: 18px;
+        }
+
+        .price {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin: 22px 0;
+        }
+
+        .now {
+            color: #c9492c;
+            font-size: 42px;
+            font-weight: 800;
+        }
+
+        .old {
+            color: #958374;
+            font-size: 20px;
+            text-decoration: line-through;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 26px;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            background: #2f2a25;
+            border-radius: 6px;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            background: #c9492c;
+        }
+
+        .section {
+            margin-top: 28px;
+            padding: 28px;
+            border: 1px solid #ead8c3;
+            border-radius: 8px;
+            background: #fffaf4;
+        }
+
+        .section h2 {
+            margin: 0 0 12px;
+            font-size: 28px;
+        }
+
+        .section p {
+            margin: 0 0 12px;
+            color: #594d42;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .gallery a {
+            overflow: hidden;
+            border-radius: 8px;
+            background: #ead8c3;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.25s ease;
+        }
+
+        .gallery a:hover img {
+            transform: scale(1.04);
+        }
+
+        .notice {
+            margin-top: 18px;
+            padding: 16px 18px;
+            color: #5f4938;
+            background: #f3e4d2;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 760px) {
+            .page {
+                width: min(100% - 20px, 1080px);
+                padding-top: 10px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                padding: 18px;
+            }
+
+            .hero img {
+                height: auto;
+                max-height: none;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img {
+                height: auto;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    Hello
+    <main class="page">
+        <section class="hero">
+            <a href="91ef76c6a7efce1b0ea2b21a6cfa1bd3b68f658a.jpeg">
+                <img src="91ef76c6a7efce1b0ea2b21a6cfa1bd3b68f658a.jpeg" alt="商品主图">
+            </a>
 
-大家好！
-<br>
-好久不见！
-<br>
-我是大家最喜爱的新人指导者，
-<br>
-今天又给大家推荐我入门时期最喜爱的“玩具”了，
-<br>
-相信大家已经可以猜到是什么了吧。
-<br>
-没错就是：启蒙先辈
-<br>
-<a href="91ef76c6a7efce1b0ea2b21a6cfa1bd3b68f658a.jpeg">
-    <img src="91ef76c6a7efce1b0ea2b21a6cfa1bd3b68f658a.jpeg">
-</a><br>
-这款斐济杯的名字听起来就很有趣，不是吗？
-<br>
-一起来看看它到底有哪些亮点吧！
-<br>
-产品外观与设计
-<br>
-首先，
-<br>
-这款启蒙先辈斐济杯的设计风格十分吸引人，
-<br>
-采用了二次元动漫风格，完美抓住了新手们的心。
-<br>
-这种设计无疑为斐济杯增添了不少趣味性，
-<br>
-让物质感受与精神幻想合二为一，也让使用它的过程变得更加有趣。
-<br>
-<a href="4bed2e738bd4b31c8b81fb22437dcf729f2ff827.jpeg">
-    <img src="4bed2e738bd4b31c8b81fb22437dcf729f2ff827.jpeg">
-</a><br>
-手感与质感
-<br>
-当然我知道大部分人更关心它的手感与质感。
-<br>
-别急，听我慢慢到来。
-<br>
-启蒙先辈斐济杯的手感非常棒，
-<br>
-材质柔软又分量十足，拿在手里的感觉非常舒适。
-<br>
-这对于新手来说是非常友好的，可以让他们更容易地感知使用的过程。
-<br>
+            <div>
+                <span class="badge">限时特价</span>
+                <h1>启蒙先辈斐济杯</h1>
+                <p class="subtitle">大家好！好久不见。今天给大家推荐一款入门时期很受欢迎的趣味好物。</p>
 
-适用人群与使用体验
-<br>
-对于喜欢慢玩的朋友来说，这款斐济杯是一个很不错的选择。
-<br>
-由于它偏软的特点，
-<br>
-使用起来更为舒适，适合那些喜欢慢慢享受的人。
-<br>
-不过，
-<br>
-如果你是喜欢强烈次激的高手，
-<br>
-可能会觉得它稍微有些不够次激。
-<br>
-<a href="2ec107ed08fa513dd8d0d1e97b6d55fbb2fbd964.jpeg">
-    <img src="2ec107ed08fa513dd8d0d1e97b6d55fbb2fbd964.jpeg">
-</a>
-<a href="66b7702b6059252dc928a133729b033b5bb5b99e.jpeg">
-    <img src="66b7702b6059252dc928a133729b033b5bb5b99e.jpeg">
-</a>
-    <p>12.00RMB <br><span>24.00RMB</span></p>
-    主播特地申请了一批回馈给粉丝<br>
-    如果能点开就是还有货哦<br>
-    <a href="https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_default"download  >购买点击这里</a>
+                <div class="price">
+                    <span class="now">12.00 RMB</span>
+                    <span class="old">24.00 RMB</span>
+                </div>
+
+                <a class="button" href="https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_default" download>立即购买</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>产品外观与设计</h2>
+            <p>这款产品的外观风格很有辨识度，采用二次元动漫风格，整体视觉更轻松，也更适合当作有趣的入门选择。</p>
+            <p>它把实用感和趣味感结合在一起，让展示页面看起来不再只是普通文字介绍。</p>
+
+            <div class="gallery">
+                <a href="4bed2e738bd4b31c8b81fb22437dcf729f2ff827.jpeg">
+                    <img src="4bed2e738bd4b31c8b81fb22437dcf729f2ff827.jpeg" alt="商品展示图一">
+                </a>
+                <a href="2ec107ed08fa513dd8d0d1e97b6d55fbb2fbd964.jpeg">
+                    <img src="2ec107ed08fa513dd8d0d1e97b6d55fbb2fbd964.jpeg" alt="商品展示图二">
+                </a>
+                <a href="66b7702b6059252dc928a133729b033b5bb5b99e.jpeg">
+                    <img src="66b7702b6059252dc928a133729b033b5bb5b99e.jpeg" alt="商品展示图三">
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>手感与适用人群</h2>
+            <p>材质偏柔软，拿在手里更轻松，适合喜欢慢慢体验、追求舒适感的新手朋友。</p>
+            <p>如果你偏好更强烈的刺激，它可能会显得温和一些；但作为入门款，整体友好度很高。</p>
+
+            <div class="notice">
+                主播特地申请了一批回馈给粉丝。如果按钮还能点开，就说明还有货哦。
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
